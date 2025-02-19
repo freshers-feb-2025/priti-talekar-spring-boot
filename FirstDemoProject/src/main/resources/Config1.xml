@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
   https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--    constructure injection-->
+    <!--    constructor injection of primitive and reference type-->
     <bean class="com.pritithink.ConstructorInjection.Occupation" name="occupation">
         <constructor-arg value="Farmer"/>
     </bean>

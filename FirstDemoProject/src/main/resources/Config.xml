@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
   https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--primitive type injection    -->
+<!--primitive type setter injection    -->
    <bean class="com.pritithink.FirstDemoProject.Student" name="student1">
        <property name="Stud_Id">
            <value>101</value>
@@ -23,7 +23,7 @@
         <property name="Stud_Address" value="Pune"/>
     </bean>
 
-<!--Collection injection-->
+<!--Collection setter injection-->
     <bean class="com.pritithink.FirstDemoProject.Employee" name="Employee1">
         <property name="Name" value="Ram"/>
         <property name="Phone">
@@ -50,7 +50,7 @@
         </property>
     </bean>
 
-<!--Refernec type injection  -->
+<!--Reference type setter injection  -->
     <bean class="com.pritithink.FirstDemoProject.First" name="First">
         <property name="A" value="10"/>
     </bean>
