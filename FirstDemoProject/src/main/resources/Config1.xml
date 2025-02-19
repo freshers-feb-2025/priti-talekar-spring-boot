@@ -9,10 +9,11 @@
         <constructor-arg value="Farmer"/>
     </bean>
 
-       <bean class="com.pritithink.ConstructorInjection.Person" name="person">
-           <constructor-arg value="Ram"/>
-           <constructor-arg value="25"/>
-           <constructor-arg ref="occupation"/>
-       </bean>
+    <bean class="com.pritithink.ConstructorInjection.Person" name="person">
+        <constructor-arg value="Ram"/>
+        <constructor-arg value="25"/>
+        <constructor-arg ref="occupation"/>
+    </bean>
+
 
 </beans>
