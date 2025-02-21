@@ -13,12 +13,8 @@ public class App {
 //        GameRunner game=new GameRunner(marioGame);
 //        game.display();
 
-//        GammingConsole game=new MarioGame();
-//        game.right();
-
-
         ApplicationContext context = new AnnotationConfigApplicationContext(App.class);
-//        context.getBean(GameRunner.class).display();
+       context.getBean(GameRunner.class).display();
 
     }
 }
