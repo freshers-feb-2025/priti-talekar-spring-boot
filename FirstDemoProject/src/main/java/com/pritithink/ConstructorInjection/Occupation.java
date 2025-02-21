@@ -1,14 +1,14 @@
 package com.pritithink.ConstructorInjection;
 
 public class Occupation {
-    private String Occupation;
+    private String occupation;
 
-    public Occupation(String Occupation){
-        this.Occupation=Occupation;
+    public Occupation(String occupation){
+        this.occupation=occupation;
     }
 
     public String getOccupation(){
-        return this.Occupation;
+        return this.occupation;
     }
 
 }

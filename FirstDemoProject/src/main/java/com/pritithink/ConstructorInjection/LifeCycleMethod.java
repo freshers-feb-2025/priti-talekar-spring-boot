@@ -26,8 +26,8 @@ public class LifeCycleMethod {
 
     public static void main(String[] args) {
         AbstractApplicationContext context=new ClassPathXmlApplicationContext("Lifecycle.xml");
-           LifeCycleMethod l1=(LifeCycleMethod)context.getBean("lifecycle");
-           l1.display();
+           LifeCycleMethod lifeCycleMethod=(LifeCycleMethod)context.getBean("lifecycle");
+           lifeCycleMethod.display();
            context.registerShutdownHook();
     }
 

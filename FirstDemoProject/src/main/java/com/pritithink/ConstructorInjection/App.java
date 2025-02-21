@@ -10,10 +10,8 @@ public class App {
     public static void main(String[] args) {
 
         ApplicationContext context=new ClassPathXmlApplicationContext("Config1.xml");
-        Person person1=(Person)context.getBean("person");
-        person1.Display();
-
-
+        Person person=(Person)context.getBean("person");
+        person.Display();
 
     }
 }

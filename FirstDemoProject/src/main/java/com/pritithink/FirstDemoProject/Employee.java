@@ -1,62 +1,69 @@
 package com.pritithink.FirstDemoProject;
-import java.util.*;
+import java.util.List;
+import java.util.Set;
+import java.util.Map;
 public class Employee {
 
-    private String Name;
-    private List<String> Phone;
-    private Set<String> Address;
-    private Map<String,String>Course;
+    private String name;
+    private List<String> phone;
+    private Set<String> address;
+    private Map<String,String>course;
 
     public Employee(){
         super();
     }
 
     public Employee(String name, List<String> phone, Set<String> address, Map<String, String> course) {
-        Name = name;
-        Phone = phone;
-        Address = address;
-        Course = course;
+       this.name = name;
+        this.phone = phone;
+        this.address = address;
+        this.course = course;
     }
 
+
+
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public List<String> getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(List<String> phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public Set<String> getAddress() {
-        return Address;
+        return address;
     }
 
-    public void setAddress(Set<String> address) {
-        Address = address;
+    public void setAddress(Set<String> address)
+    {
+        this.address = address;
     }
 
-    public Map<String, String> getCourse() {
-        return Course;
+    public Map<String, String> getCourse()
+    {
+        return course;
     }
 
     public void setCourse(Map<String, String> course) {
-        Course = course;
+        
+               this.course = course;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "Name='" + Name + '\'' +
-                ", Phone=" + Phone +
-                ", Address=" + Address +
-                ", Course=" + Course +
+                "name='" + name + '\'' +
+                ", phone=" + phone +
+                ", address=" + address +
+                ", course=" + course +
                 '}';
     }
 }
