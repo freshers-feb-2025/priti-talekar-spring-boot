@@ -15,12 +15,14 @@ public class PacMan implements GammingConsole{
     }
 
     @Override
-    public void left() {
+    public void left()
+    {
         System.out.println("left");
     }
 
     @Override
-    public void right() {
+    public void right()
+    {
         System.out.println("right");
     }
 }

@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 @ComponentScan("Game")
 public class App {
     public static void main(String[] args) {
@@ -13,8 +13,12 @@ public class App {
 //        GameRunner game=new GameRunner(marioGame);
 //        game.display();
 
+//        GammingConsole game=new MarioGame();
+//        game.right();
+
 
         ApplicationContext context = new AnnotationConfigApplicationContext(App.class);
-        context.getBean(GameRunner.class).display();
+//        context.getBean(GameRunner.class).display();
+
     }
 }
