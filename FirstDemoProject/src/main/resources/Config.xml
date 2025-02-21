@@ -51,13 +51,13 @@
     </bean>
 
 <!--Reference type setter injection  -->
-    <bean class="com.pritithink.FirstDemoProject.First" name="First">
-        <property name="A" value="10"/>
+    <bean class="com.pritithink.FirstDemoProject.Customer" name="Customer">
+        <property name="customerId" value="101"/>
     </bean>
-    <bean class="com.pritithink.FirstDemoProject.Second" name="Second">
-        <property name="B" value="20"/>
-        <property name="obj">
-            <ref bean="First"></ref>
+    <bean class="com.pritithink.FirstDemoProject.Order" name="Order">
+        <property name="orderId" value="10"/>
+        <property name="customer">
+            <ref bean="Customer"></ref>
         </property>
     </bean>
 

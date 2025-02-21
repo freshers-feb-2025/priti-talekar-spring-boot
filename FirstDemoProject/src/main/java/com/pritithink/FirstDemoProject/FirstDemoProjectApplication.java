@@ -23,9 +23,9 @@ public class FirstDemoProjectApplication {
 		System.out.println("Phone Numbers: "+E1.getPhone());
 
 		//setter injection of refernce type
-        Second temp=(Second) context.getBean("Second");
-		System.out.println(temp.getB());
-		System.out.println(temp.getObj().getA());
+        Order order=(Order) context.getBean("Order");
+		System.out.println(order.getOrderId());
+		System.out.println(order.getCustomer().getCutomerId());
 
 	}
 
