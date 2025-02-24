@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--primitive type injection    -->
+   <bean class="com.pritithink.FirstDemoProject.Student" name="student1">
+       <property name="Stud_Id">
+           <value>101</value>
+       </property>
+       <property name="Stud_Name">
+           <value>Adam</value>
+       </property>
+       <property name="Stud_Address">
+           <value>Delhi</value>
+       </property>
+   </bean>
+
+    <bean class="com.pritithink.FirstDemoProject.Student" name="student2">
+    <property name="Stud_Id" value="102"/>
+        <property name="Stud_Name" value="John"/>
+        <property name="Stud_Address" value="Pune"/>
+    </bean>
+
+<!--Collection injection-->
+    <bean class="com.pritithink.FirstDemoProject.Employee" name="Employee1">
+        <property name="Name" value="Ram"/>
+        <property name="Phone">
+            <list>
+                <value>92744699</value>
+                <value>24783833</value>
+                <value>28484830</value>
+                <null/>
+            </list>
+        </property>
+        <property name="Address">
+            <set>
+                <value>Delhi</value>
+                <value>Pune</value>
+                <value>Mumbai</value>
+            </set>
+        </property>
+        <property name="Course">
+            <map>
+                <entry key="Java" value="2months"/>
+                <entry key="javascript" value="1month"/>
+                <entry key="react js" value="1month"/>
+            </map>
+        </property>
+    </bean>
+
+<!--Refernec type injection  -->
+    <bean class="com.pritithink.FirstDemoProject.First" name="First">
+        <property name="A" value="10"/>
+    </bean>
+    <bean class="com.pritithink.FirstDemoProject.Second" name="Second">
+        <property name="B" value="20"/>
+        <property name="obj">
+            <ref bean="First"></ref>
+        </property>
+    </bean>
+
+</beans>
