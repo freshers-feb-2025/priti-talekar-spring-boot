@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    constructor injection of primitive and reference type-->
+    <bean class="com.pritithink.ConstructorInjection.Occupation" name="occupation">
+        <constructor-arg value="Farmer"/>
+    </bean>
+
+    <bean class="com.pritithink.ConstructorInjection.Person" name="person">
+        <constructor-arg value="Ram"/>
+        <constructor-arg value="25"/>
+        <constructor-arg ref="occupation"/>
+    </bean>
+
+
+</beans>
