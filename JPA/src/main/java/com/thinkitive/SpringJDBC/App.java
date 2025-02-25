@@ -1,4 +1,4 @@
-package com.thinkitive.JPA;
+package com.thinkitive.SpringJDBC;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

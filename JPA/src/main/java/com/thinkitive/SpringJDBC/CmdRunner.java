@@ -1,4 +1,4 @@
-package com.thinkitive.JPA;
+package com.thinkitive.SpringJDBC;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
