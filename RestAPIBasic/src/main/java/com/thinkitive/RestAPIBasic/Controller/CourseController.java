@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@RestController()
 public class CourseController {
 
     @Autowired
@@ -16,22 +16,23 @@ public class CourseController {
 
     @GetMapping("/courses")
     public List<Course> getCourses(){
-        return this.courseServiceImp.getCourses();
+        return courseServiceImp.getCourses();
     }
 
     @GetMapping("/courses/{courseId}")
     public Course getCourse(@PathVariable String courseId){
-        return this.courseServiceImp.getCourse(Integer.parseInt(courseId));
+        return courseServiceImp.getCourse(Integer.parseInt(courseId));
     }
 
     @PostMapping("/courses")
     public Course addCourse(@RequestBody Course course){
-          return  this.courseServiceImp.addCourse(course);
+          return  courseServiceImp.addCourse(course);
     }
 
     @DeleteMapping("/courses/{courseId}")
-    public String deleteCourse(@PathVariable String courseId){
-        boolean deleteCourse= this.courseServiceImp.deleteCourse(Integer.parseInt(courseId));
+    public String deleteCourse(@PathVariable String courseId,@RequestParam String cIftfyhd){
+        System.out.println("dfghgfdfggh:::" +cIftfyhd);
+        boolean deleteCourse= courseServiceImp.deleteCourse(Integer.parseInt(courseId));
 
         if(deleteCourse){
             return "course With Id "+courseId+" deleted successfully";
