@@ -51,6 +51,8 @@ public class StudentController {
         student.setStudentCity(dto.getStudentCity());
         student.setStudentCollegeName(dto.getStudentCollege());
         return student;
+
+
     }
 
     private StudentResponseDTO convertToResponseDTO(Student student){
