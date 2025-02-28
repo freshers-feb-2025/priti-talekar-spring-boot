@@ -1,9 +1,12 @@
 package com.thinkiitve.MongodbCrud.Entity;
 
+import com.thinkiitve.MongodbCrud.DTO.StudentResponseDTO;
+import lombok.Builder;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@Builder
 @Document(collection = "student")
 public class Student {
 
@@ -46,10 +49,6 @@ public class Student {
         this.studentCollegeName = studentCollegeName;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" + "id=" + studentId + ", name='" + studentName + '\'' + ", city='" + studentCity + '\'' + ", college='" + studentCollegeName + '\'' + '}';
-    }
 
 
 }
