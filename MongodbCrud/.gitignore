@@ -1,0 +1,8 @@
+./.idea
+.idea
+.mvn/
+HELP.md
+mvnw.cmd
+target/
+.gitattributes
+.idea/workspace.xml
