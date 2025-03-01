@@ -1,0 +1,10 @@
+RestAPIBasic/
+MongodbCrud/
+FirstDemoProject/
+learn-spring-framework/
+JPA/
+
+*.log
+target/
+*.class
+.idea/
