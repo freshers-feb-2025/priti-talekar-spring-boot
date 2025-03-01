@@ -20,7 +20,7 @@ public class EmployeeController {
         return "Hello ";
     }
 
-    //Error.
+
     @GetMapping("/{employeeId}")
     public EmployeeResponseDto findEmployeeById(@PathVariable String employeeId){
         ObjectId employeId=new ObjectId(employeeId);

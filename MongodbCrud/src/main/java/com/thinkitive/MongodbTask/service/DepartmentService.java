@@ -23,11 +23,8 @@ public class DepartmentService {
         private RequestResponseConverter requestResponseConverter;
 
         public DepartmentResponseDto addDepartment(DepartmentRequestDto departmentRequestDto){
-            System.out.println("=================== 1");
             Department department=requestResponseConverter.convertToEntityDepartment(departmentRequestDto);
-            System.out.println("=================== 2");
             Department savedDeapartment=departmentRepository.save(department);
-            System.out.println("================= 3");
             return requestResponseConverter.convertToResponseDTODepartment(savedDeapartment);
         }
 

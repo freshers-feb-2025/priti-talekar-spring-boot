@@ -46,21 +46,21 @@ public class EmployeeService {
   }
 
     public EmployeeResponseDto getEmployeeById(ObjectId employeeId) {
-//        Aggregation agg=Aggregation.newAggregation(
-//                Aggregation.match(Criteria.where("_id").is(employeeId)),
-//                Aggregation.lookup("department","departmentId","_id","department")
-//        );
-//
-//        AggregationResults<Employee> result=mongoTemplate.aggregate(agg,"employee",Employee.class);
-//
-//        List<Employee> employees=result.getMappedResults();
-//        if(employees.isEmpty()){
-//            return null;
-//        }
-//        Employee employee=employees.get(0);
-//        return requestResponseConverter.convertToResponseDTOEmployee(employee);
-          Optional<Employee>empolyee=employeeRepository.findById(employeeId);
-          return empolyee.map(requestResponseConverter::convertToResponseDTOEmployee).orElse(null);
+        Aggregation agg=Aggregation.newAggregation(
+                Aggregation.match(Criteria.where("_id").is(employeeId)),
+                Aggregation.lookup("department","departmentId","_id","department")
+        );
+
+        AggregationResults<Employee> result=mongoTemplate.aggregate(agg,"employee",Employee.class);
+
+        List<Employee> employees=result.getMappedResults();
+        if(employees.isEmpty()){
+            return null;
+        }
+        Employee employee=employees.get(0);
+        return requestResponseConverter.convertToResponseDTOEmployee(employee);
+//          Optional<Employee>empolyee=employeeRepository.findById(employeeId);
+//          return empolyee.map(requestResponseConverter::convertToResponseDTOEmployee).orElse(null);
 
     }
 

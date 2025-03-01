@@ -16,14 +16,10 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-    @GetMapping
-    public String hello(){
-        return "Show data";
-    }
+
 
     @PostMapping
     public DepartmentResponseDto addDepartment(@RequestBody DepartmentRequestDto departmentRequestDto){
-        System.out.println("==================");
         return departmentService.addDepartment(departmentRequestDto);
     }
 
